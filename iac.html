@@ -5,13 +5,23 @@
     <meta name='viewport' content='width=device-width, initial-scale=1.0'>
     <meta name='GENERATOR' content='IACConverter  version 10.4.7996.0'>
     <title>Pricing Calculator </title>
+	<!-- CSS only -->
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/default-ssc-theme.css" id="ssc-theme"/>
     <link rel="stylesheet" href="assets/css/app.min.css" />
     </head>
+	<nav class="navbar navbar-light">
+		<div class="container-fluid">
+		  <a class="navbar-brand" href="#">
+			<img src="assets/iac_logo_NEW_No_Web.png" alt=""  height="250%" class="d-inline-block align-text-top">
+		  </a>
+		</div>
+	  </nav>
     <body onload="LoadFromQueryString();recalc_onclick('');" onunload='' browserstorage="false">
         <noscript style='color:#F15623;'>
             <!-- This web page contains a live and functional IAC created with <a href='https://www.IACconverter.com'>IACConverter</a>. Please enable JavaScript in your web browser for the live calculations to work properly. -->
         </noscript>
+		
         <form id='formc' name='formc' method='post'  target='_self'>
 		    <input type='hidden' id='xl_IAC' name='xl_IAC' value='Fabric Pricing Calc Jan 25 2022_NEW' />
             <input type='hidden' id='xl_client' name='xl_client' value='x10.4.7996.0' />
@@ -37,20 +47,14 @@
 
                  <div id='sheet-1' class='tab-pane active'>
                     <div class='container-fluid  '>
-<section class=''>
-<table cellspacing='0' cellpadding='0' style='border-spacing:0;' onkeydown='javascript:navigate(event);'>
-					<col width='166'/>
-					<col width='75'/>
-					<col width='74'/>
-					<col width='85'/>
-					<col width='162'/>
-					<col width='135'/>
+	<table cellspacing='0' cellpadding='0' style='border-spacing:0;' onkeydown='javascript:navigate(event);'>
+		<section class="">
                     <tr style='height:21pt;'>
-						<td class='ee100' style='height:21pt;'>
+						<td class='ee100 ' style='height:21pt;'>
 						    <fieldset id='FS1$XLEW_1_1_1' style='border:0;padding:0;'>
 							    <select name='XLEW_1_1_1' id='XLEW_1_1_1' class='ee102 form-control' style=' width:100% ; padding-left:4px; padding-right:2px;' tabindex='1' onchange="recalc_onclick('XLEW_1_1_1')" size='1' data-sheet='1' data-row='1' data-col='1'>
 									<option  data-value='s:SELECT MATERIAL' selected >SELECT MATERIAL</option>
-									<option  data-value='s:Samba Printed' selected >Samba Printed</option>
+									<option  data-value='s:Samba Printed'  >Samba Printed</option>
 									<option  data-value='s:Samba Blank' >Samba Blank</option>
 									<option  data-value='s:Microlux Printed' >Microlux Printed</option>
 									<option  data-value='s:Microlux Blank' >Microlux Blank</option>
@@ -58,13 +62,241 @@
 							    </select>
 						    </fieldset>
 						</td>
+						<!-- <td class='ee103' style='height:21pt;'>&nbsp;</td>
 						<td class='ee103' style='height:21pt;'>&nbsp;</td>
 						<td class='ee103' style='height:21pt;'>&nbsp;</td>
 						<td class='ee103' style='height:21pt;'>&nbsp;</td>
-						<td class='ee103' style='height:21pt;'>&nbsp;</td>
-						<td class='ee103' style='height:21pt;'>&nbsp;</td>
+						<td class='ee103' style='height:21pt;'>&nbsp;</td> -->
                     </tr>
-                    <tr style='height:16pt;'>
+	<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Item#</th>
+      <th scope="col">Qty</th>
+      <th scope="col">Width</th>
+      <th scope="col">Height</th>
+	  <th scope="col">Unit Price</th>
+	  <th scope="col">Extension</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+		<td class='ee109' style='height:16pt;'>
+			1
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_3_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_3_2')" name='XLEW_1_3_2' placeholder='' tabindex='2' data-sheet='1' data-row='3' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_3_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_3_3')" name='XLEW_1_3_3' placeholder='' tabindex='3' data-sheet='1' data-row='3' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_3_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_3_4')" name='XLEW_1_3_4' placeholder='' tabindex='4' data-sheet='1' data-row='3' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_3_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_3_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_3_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_3_11' tabindex='-1' />
+		</td>
+    </tr>
+    <tr>
+		<td class='ee109' style='height:16pt;'>
+			2
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_4_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_4_2')" name='XLEW_1_4_2' placeholder='' tabindex='5' data-sheet='1' data-row='4' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_4_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_4_3')" name='XLEW_1_4_3' placeholder='' tabindex='6' data-sheet='1' data-row='4' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_4_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_4_4')" name='XLEW_1_4_4' placeholder='' tabindex='7' data-sheet='1' data-row='4' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_4_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_4_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_4_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_4_11' tabindex='-1' />
+		</td>
+    </tr>
+    <tr>
+		<td class='ee109' style='height:16pt;'>
+			3
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_5_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_5_2')" name='XLEW_1_5_2' placeholder='' tabindex='8' data-sheet='1' data-row='5' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_5_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_5_3')" name='XLEW_1_5_3' placeholder='' tabindex='9' data-sheet='1' data-row='5' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_5_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_5_4')" name='XLEW_1_5_4' placeholder='' tabindex='10' data-sheet='1' data-row='5' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_5_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_5_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_5_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_5_11' tabindex='-1' />
+		</td>
+	<tr>
+		<td class='ee109' style='height:16pt;'>
+			4
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_6_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_6_2')" name='XLEW_1_6_2' placeholder='' tabindex='11' data-sheet='1' data-row='6' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_6_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_6_3')" name='XLEW_1_6_3' placeholder='' tabindex='12' data-sheet='1' data-row='6' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_6_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_6_4')" name='XLEW_1_6_4' placeholder='' tabindex='13' data-sheet='1' data-row='6' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_6_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_6_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_6_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_6_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			5
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_7_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_7_2')" name='XLEW_1_7_2' placeholder='' tabindex='14' data-sheet='1' data-row='7' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_7_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_7_3')" name='XLEW_1_7_3' placeholder='' tabindex='15' data-sheet='1' data-row='7' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_7_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_7_4')" name='XLEW_1_7_4' placeholder='' tabindex='16' data-sheet='1' data-row='7' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_7_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_7_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_7_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_7_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			6
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_8_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_8_2')" name='XLEW_1_8_2' placeholder='' tabindex='17' data-sheet='1' data-row='8' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_8_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_8_3')" name='XLEW_1_8_3' placeholder='' tabindex='18' data-sheet='1' data-row='8' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_8_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_8_4')" name='XLEW_1_8_4' placeholder='' tabindex='19' data-sheet='1' data-row='8' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_8_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_8_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_8_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_8_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			7
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_9_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_9_2')" name='XLEW_1_9_2' placeholder='' tabindex='20' data-sheet='1' data-row='9' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_9_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_9_3')" name='XLEW_1_9_3' placeholder='' tabindex='21' data-sheet='1' data-row='9' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_9_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_9_4')" name='XLEW_1_9_4' placeholder='' tabindex='22' data-sheet='1' data-row='9' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_9_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_9_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_9_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_9_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			8
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_10_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_10_2')" name='XLEW_1_10_2' placeholder='' tabindex='23' data-sheet='1' data-row='10' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_10_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_10_3')" name='XLEW_1_10_3' placeholder='' tabindex='24' data-sheet='1' data-row='10' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_10_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_10_4')" name='XLEW_1_10_4' placeholder='' tabindex='25' data-sheet='1' data-row='10' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_10_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_10_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_10_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_10_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			9
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_11_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_11_2')" name='XLEW_1_11_2' placeholder='' tabindex='26' data-sheet='1' data-row='11' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_11_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_11_3')" name='XLEW_1_11_3' placeholder='' tabindex='27' data-sheet='1' data-row='11' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_11_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_11_4')" name='XLEW_1_11_4' placeholder='' tabindex='28' data-sheet='1' data-row='11' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_11_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_11_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_11_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_11_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee109' style='height:16pt;'>
+			10
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_12_2' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),0);recalc_onclick('XLEW_1_12_2')" name='XLEW_1_12_2' placeholder='' tabindex='29' data-sheet='1' data-row='12' data-col='2'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_12_3' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_12_3')" name='XLEW_1_12_3' placeholder='' tabindex='30' data-sheet='1' data-row='12' data-col='3'/>
+		</td>
+		<td class='ee112' style='height:16pt;'>
+			<input id='XLEW_1_12_4' type='text' value='' class='ee113 form-control' style='width:100%' onchange="this.value=eedisplayFloatND(eeparseFloat(this.value),2);recalc_onclick('XLEW_1_12_4')" name='XLEW_1_12_4' placeholder='' tabindex='31' data-sheet='1' data-row='12' data-col='4'/>
+		</td>
+		<td class='ee114' style='height:16pt;'>
+		<input id='XLEW_1_12_9' type='text' readonly='readonly' value='' class='ee114' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_12_9' tabindex='-1' />
+		</td>
+		<td class='ee116' style='height:16pt;'>
+		<input id='XLEW_1_12_11' type='text' readonly='readonly' value='-' class='ee116' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_12_11' tabindex='-1' />
+		</td>
+	  </tr>
+	  <tr>
+		<td class='ee119' style='height:16pt;'>&nbsp;</td>
+		<td class='ee119' style='height:16pt;'>&nbsp;</td>
+		<td class='ee119' style='height:16pt;'>&nbsp;</td>
+		<td class='ee119' style='height:16pt;'>&nbsp;</td>
+		<td class='ee122' style='height:16pt;'>
+			<span> </span>Grand Total:<span> </span>
+		</td>
+		<td class='ee125' style='height:16pt;'>
+		<input id='XLEW_1_14_11' type='text' readonly='readonly' value='-' class='ee125' style='overflow:hidden; border:0px solid #000000; width:100% ' name='XLEW_1_14_11' tabindex='-1' />
+		</td>
+	</tr>
+  </tbody>
+</table>
+
+
+					
+                    <!-- <tr style='height:16pt;'>
 						<td class='ee106' style='height:16pt;'>
 							item#
 						</td>
@@ -336,7 +568,7 @@
                     <tr style='height:14pt;'>
 						<td class='ee103' style='height:14pt;' colspan = '3'><div style='overflow:hidden'></div></td>
 						<td class='ee103' style='height:14pt;' colspan = '3' rowspan = '5'>
-						<span>
+						<span> -->
   <table cellpadding='0' cellspacing='0'>
    <tr>
     <td width='83' height='10'></td>
